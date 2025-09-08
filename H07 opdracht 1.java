@@ -73,3 +73,7 @@ case 1:
   println("Deze leeftijd ken ik nog niet");
   break;
 }
+float somAntwoord = 0;
+somAntwoord = (10 - 20)/10+3 * 43.34;
+println("");
+println(somAntwoord);
