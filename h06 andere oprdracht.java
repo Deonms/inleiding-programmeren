@@ -5,7 +5,7 @@ String resultaat = "";
 int invoernummer = 3; //verander de nummer om je score te krijgen
 int totaal = steen1 + steen2 + steen3 / invoernummer;
 
-if (steen1 == 1 && steen2 == 1 && steen3 == 1) {
+if (steen1 == 1 || steen2 == 1 || steen3 == 1) {
     resultaat = "mis";
 } else if (steen1 == 6 && steen2 == 6 && steen3 == 6) {
     resultaat = "Super sterke hit";
