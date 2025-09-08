@@ -1,9 +1,10 @@
 int goedSlechtCijfer;
 int goedSlechtPresentie;
 int geslaagdOfGezakt; 
+String naam = "Jongen"; //Verander naar naam leerling
 
 float eindCijfer;
-eindCijfer = 7;
+eindCijfer = 7; //Verander behaalde vijfer leerling
 if (eindCijfer < 5.5) {
   println(eindCijfer);
   println("Niet Voldoende");
@@ -17,7 +18,7 @@ else if (eindCijfer >= 5.5); {
 
 
 float Presentie;
-Presentie = 17;
+Presentie = 17; //Verander Presentie lessen leerling
 Presentie = Presentie * 5 ;
 if (Presentie < 80) {
   println(Presentie + "%");
@@ -68,8 +69,8 @@ else if (Presentie >= 80); {
 
 geslaagdOfGezakt = goedSlechtPresentie % goedSlechtCijfer;
 if (geslaagdOfGezakt == 0) {
-  println("[Naam] is Geslaagd");
+  println(naam + " is Geslaagd");
 }
 else if (geslaagdOfGezakt >= 1) {
-  println("[Naam] is Gezakt");
+  println(naam + " is Gezakt");
 }
