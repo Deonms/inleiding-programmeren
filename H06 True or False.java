@@ -1,4 +1,4 @@
-int temperatuur = 17;
+int temperatuur = 18;
 if ( temperatuur < 0) {
   println("het is kouder dan 0 graden celcius = " + true);
 }
@@ -22,7 +22,7 @@ if (jantje >= 4) {
   println("Jantje mag nog niet van tafel = " + true);
 }
 
-String datum = "4-9";
+String datum = "15-9";
 String mijnVerjaardag = "16-10";
 if (mijnVerjaardag == datum) {
   println("het is mijn verjaardag = " + true);
