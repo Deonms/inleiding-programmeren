@@ -82,3 +82,22 @@ for(int i = 0; i < 5; i++){
 ellipse(110 - sizeC/2, 110 - sizeC/20, sizeC,sizeC);
 sizeC = sizeC - 10;
 }
+
+//be de volgende boeit het niet als je ze tegelijk doet
+for(int i = 100; i >= 90; i--){
+println(i);
+}
+
+println(" ");
+
+for(int i = 50; i >= 20; i-=5){
+println(i);
+}
+
+println(" ");
+
+for(int i = 20; i >= 10; i--){
+println(i);
+}
+
+
