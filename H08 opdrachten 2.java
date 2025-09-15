@@ -63,3 +63,12 @@ for(int i = 0; i <= 100; i++){
 ellipse(100 - sizeC/2, 100 - sizeC/2, sizeC,sizeC);
 sizeC = sizeC - 10;
 }
+
+//doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
+size(200,200);
+background(255,255,255);
+int sizeC = 50;
+for(int i = 0; i < 5; i++){
+ellipse(100, 100, sizeC,sizeC);
+sizeC = sizeC - 10;
+}
