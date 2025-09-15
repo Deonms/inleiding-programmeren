@@ -14,6 +14,8 @@ println("ik ga net zo lang door tellen tot en met je leeftijd in uren.");
 println("teller is nu " + tellerb);
 tellerb++;
 tellerb++;
+tellerb++;
+tellerb++;
 }
 int tellerc = 0;
 float leeftijdc = leeftijdb;
@@ -21,6 +23,10 @@ leeftijdc = leeftijdc * 60;
 while(tellerc <= leeftijdc){
 println("ik ga net zo lang door tellen tot en met je leeftijd in minuten.");
 println("teller is nu " + tellerc);
+tellerc++;
+tellerc++;
+tellerc++;
+tellerc++;
 tellerc++;
 tellerc++;
 tellerc++;
@@ -41,8 +47,16 @@ tellerd++;
 tellerd++;
 tellerd++;
 tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
+tellerd++;
 }
-println(leeftijda + "," + leeftijdb + "," + leeftijdc + "," + leeftijdd);
 println(leeftijda + "," + leeftijdb + "," + leeftijdc + "," + leeftijdd);
 //je kan deze niet tegelijk laten gaan tellen het doet eerst wat hier boven staat en gaat dan pas veder naar de volgende stuk
 float leeftijd = 15;
