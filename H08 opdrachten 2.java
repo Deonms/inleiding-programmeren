@@ -10,12 +10,14 @@ for (int i = 0; i <= 10; i++) {
   print(" | ");
   println(i);
 }
+
 //doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
 size(60, 280);
 background(255, 255, 255);
 for (int i = 0; i <= 10; i++) {
   rect(1, i * 1 + 1, 1, 200);
 }
+
 //doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
 size(140,140);
 background(255,255,255);
@@ -29,6 +31,7 @@ yWaarde = yWaarde + 10;
 yWaarde = 10;
 xWaarde = xWaarde + 10;
 }
+
 //doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
 size(70,70);
 background(255,255,255);
@@ -42,6 +45,7 @@ yWaarde = yWaarde + 10;
 yWaarde = 10;
 xWaarde = xWaarde + 10;
 }
+
 //doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
 size(200,200);
 background(255,255,255);
