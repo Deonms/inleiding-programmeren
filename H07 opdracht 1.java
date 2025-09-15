@@ -67,7 +67,7 @@ case 1:
   case 48:
   case 49:
   case 50:
-  println("bove  middelbare leeftijd");
+  println("boven  middelbare leeftijd");
   break;
   default:
   println("Deze leeftijd ken ik nog niet");
