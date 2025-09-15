@@ -26,10 +26,11 @@ int tellerd = 0;
 float leeftijdd = leeftijdc;
 leeftijdd = leeftijdd * 60;
 while(tellerd <= leeftijdd){
-println("ik ga net zo lang door tellen tot en met je leeftijd in minuten.");
+println("ik ga net zo lang door tellen tot en met je leeftijd in seconden.");
 println("teller is nu " + tellerd);
-telledr++;
+tellerd++;
 }
+println(leeftijda + "," + leeftijdb + "," + leeftijdc + "," + leeftijdd);
 //je kan deze niet tegelijk laten gaan tellen het doet eerst wat hier boven staat en gaat dan pas veder naar de volgende stuk
 float leeftijd = 15;
 for (float i = 0; i<=leeftijd; i++) {
