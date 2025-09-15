@@ -1,5 +1,5 @@
 int tellera = 0;
-float leeftijda = 15;
+float leeftijda = 15; //moet in jaren
 leeftijda = leeftijda * 365 ;
 while(tellera <= leeftijda){
 println("ik ga net zo lang door tellen tot en met je leeftijd in dagen.");
