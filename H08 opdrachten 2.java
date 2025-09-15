@@ -10,7 +10,25 @@ for (int i = 0; i <= 10; i++) {
   print(" | ");
   println(i);
 }
-
+//doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
+size(60, 280);
+background(255, 255, 255);
+for (int i = 0; i <= 10; i++) {
+  rect(1, i * 1 + 1, 1, 200);
+}
+//doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
+size(70,70);
+background(255,255,255);
+int xWaarde = 10;
+int yWaarde = 10;
+for(int i = 0; i < 5; i++){
+for(int j = 0; j < 5; j++){
+rect(xWaarde, yWaarde, 10,10);
+yWaarde = yWaarde + 10;
+}
+yWaarde = 10;
+xWaarde = xWaarde + 10;
+}
 //doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
 size(200,200);
 background(255,255,255);
