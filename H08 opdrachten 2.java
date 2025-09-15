@@ -17,12 +17,12 @@ for (int i = 0; i <= 10; i++) {
   rect(1, i * 1 + 1, 1, 200);
 }
 //doe ze niet tegelijk omdat je dan deze hier onder alleen ziet
-size(70,70);
+size(140,140);
 background(255,255,255);
 int xWaarde = 10;
 int yWaarde = 10;
-for(int i = 0; i < 5; i++){
-for(int j = 0; j < 5; j++){
+for(int i = 0; i <= 10; i++){
+for(int j = 0; j <= 10; j++){
 rect(xWaarde, yWaarde, 10,10);
 yWaarde = yWaarde + 10;
 }
