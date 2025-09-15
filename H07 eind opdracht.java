@@ -32,14 +32,14 @@ else if (cijferResultaat = 4) {
     println(cijferResultaat + " Resultaat is Onvoldoende");
 }
 else if (cijferResultaat = 5) {
-    println(cijferResultaat + " Resultaat is Matig")
+    println(cijferResultaat + " Resultaat is Matig");
 }
 else if (cijferResultaat = 6 || cijferResultaat = 7) {
-    println(cijferResultaat + " Resultaat is Voldoende")
+    println(cijferResultaat + " Resultaat is Voldoende");
 }
 else if (cijferResultaat = 8 || cijferResultaat = 9 || cijferResultaat = 10) [
-    println(cijferResultaat + " Resultaat is Goed")
+    println(cijferResultaat + " Resultaat is Goed");
 ]
 else if (cijferResultaat >= 11) {
-    println("Cijfer = " + cijferResultaat + " is Niet Geldig Controleer of je het goed hebt ingevuld")
+    println("Cijfer = " + cijferResultaat + " is Niet Geldig Controleer of je het goed hebt ingevuld");
 }
