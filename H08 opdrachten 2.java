@@ -98,6 +98,17 @@ println(" ");
 
 for(int i = 20; i >= 10; i--){
 println(i);
+
 }
-
-
+//hoe dit  werkt hieronder is simple: je geeft nummer een cijfer dat is 0 en nummerTwee krijgt cijfer 1 dan print je nummer uit en dan
+//wordt de som uitgevoerd om en ondervolgende opgeslagen nummer krijgt de cijfer van nummerTwee en nummerTwee krijgt daarna de cijfer die
+//geregristeerd staat onder volgende en dan doet hij dit cyclus opnieuw totdat hij het dus wat er nu staat 30 keer heeft gedaan
+int nummer = 0, nummerTwee = 1;
+//verander het cijfer dat hiet staat in de code: i <= 19. zodat je meer cijfers krijgt
+for (int i = 1;  i <= 30; i++){
+  print(nummer + ",");
+int volgende = nummer + nummerTwee;
+nummer = nummerTwee;
+nummerTwee = volgende;
+}
+//als de aantal cijfers te hoog is wordt het een min getal
