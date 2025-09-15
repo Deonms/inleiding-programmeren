@@ -1,12 +1,36 @@
-int teller = 0;
-float leeftijd = 15;
-leeftijd = leeftijd * 365 * 24;
-while(teller <= leeftijd){
+int tellera = 0;
+float leeftijda = 15;
+leeftijda = leeftijda * 365 ;
+while(tellera <= leeftijda){
+println("ik ga net zo lang door tellen tot en met je leeftijd in dagen.");
+println("teller is nu " + tellera);
+tellera++;
+}
+int tellerb = 0;
+float leeftijdb = leeftijda;
+leeftijdb = leeftijdb * 24;
+while(tellerb <= leeftijdb){
 println("ik ga net zo lang door tellen tot en met je leeftijd in uren.");
-println("teller is nu " + teller);
-teller++;
-
-//je kan deze niet tegelijk laten gaan tellen
+println("teller is nu " + tellerb);
+tellerb++;
+}
+int tellerc = 0;
+float leeftijdc = leeftijdb;
+leeftijdc = leeftijdc * 60;
+while(tellerc <= leeftijdc){
+println("ik ga net zo lang door tellen tot en met je leeftijd in minuten.");
+println("teller is nu " + tellerc);
+tellerc++;
+}
+int tellerd = 0;
+float leeftijdd = leeftijdc;
+leeftijdd = leeftijdd * 60;
+while(tellerd <= leeftijdd){
+println("ik ga net zo lang door tellen tot en met je leeftijd in minuten.");
+println("teller is nu " + tellerd);
+telledr++;
+}
+//je kan deze niet tegelijk laten gaan tellen het doet eerst wat hier boven staat en gaat dan pas veder naar de volgende stuk
 float leeftijd = 15;
 for (float i = 0; i<=leeftijd; i++) {
   leeftijd = leeftijd * 365 * 24;
