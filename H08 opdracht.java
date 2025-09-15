@@ -6,3 +6,10 @@ println("ik ga net zo lang door tellen tot en met je leeftijd in uren.");
 println("teller is nu " + teller);
 teller++;
 
+float leeftijd = 15;
+for (float i = 0; i<=leeftijd; i++) {
+  leeftijd = leeftijd * 365 * 24;
+  println("ik tel 2 keer zo snel je leeftijd in uren.");
+  println("teller is nu " + i);
+  i++;
+}
