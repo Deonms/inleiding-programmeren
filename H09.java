@@ -16,7 +16,6 @@ void setup(){
   line(190, 230, 190, 50);
 }
 // andere opdracht
-size(400, 400);
 int eerste = 1;
 int tweede = 2;
 int derde = 3;
