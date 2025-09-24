@@ -31,6 +31,6 @@ void setup() {
     gevonden = true;
     println(gevonden + ", " + namen[input - 1]);
   } else {
-    println("false, name not found");
+    println("false, naam is niet gevonden checck input nummer");
   }
 }
