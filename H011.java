@@ -19,3 +19,18 @@ for (int i = 0; i < aantal; i++) {
   variabeleNaam[i] = 12 * i;
   println("12 x " + i + " = " + variabeleNaam[i]);
 }
+//new code
+String[] namen = {"bob", "mike", "pieter", "Sandra", "Deon", "Yassir", "isa", "jan", "calsey", "reynold"};
+boolean gevonden;
+int input = 8; //wijzig dit nummer om het te zoeken
+
+void setup() {
+  gevonden = false;
+  
+  if (input >= 1 && input <= namen.length) {
+    gevonden = true;
+    println(gevonden + ", " + namen[input - 1]);
+  } else {
+    println("false, name not found");
+  }
+}
