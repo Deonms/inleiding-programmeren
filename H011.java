@@ -12,3 +12,10 @@ int[] mijnStapelGetllen = {10, 9, 8, 7, 6 ,5, 4, 3, 2, 1, 0};
 println(variabeleNaam);
 println(mijnStapelGetllen);
 // new code
+int aantal = 11; //wijzig cijfer voor hoger nummer
+int[] variabeleNaam = new int[aantal];
+
+for (int i = 0; i < aantal; i++) {
+  variabeleNaam[i] = 12 * i;
+  println("12 x " + i + " = " + variabeleNaam[i]);
+}
