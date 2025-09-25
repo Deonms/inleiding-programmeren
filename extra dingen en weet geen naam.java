@@ -57,3 +57,11 @@ for(int s = 1 ; s == 1 ; s++){
     }
   }
 }
+//meer code:
+void setup() {
+  printNaamLeeftijd(15, "Deon");
+}
+
+void printNaamLeeftijd(int leeftijd, String naam) {
+  println("Hallo mijn naam is " + naam + " en ik ben " + leeftijd + " jaar oud");
+}
