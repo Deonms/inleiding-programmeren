@@ -20,10 +20,10 @@ for (int i = 0; i < aantal; i++) {
   println("12 x " + i + " = " + variabeleNaam[i]);
 }
 //new code
-String[] namen = {"bob", "mike", "pieter", "Sandra", "Deon", "Yassir", "isa", "jan", "calsey", "reynold"};
+String[] namen = {"Bob", "Mike", "Pieter", "Sandra", "Deon", "Yassir", "Isa", "Jan", "Calsey", "Reynold", "Ronald", "Isabella" , "bella", "Fenna", "Eline", "Elin", "Tim", "Luuk"};
 boolean gevonden;
 int input = 8; //wijzig dit nummer om het te zoeken
-
+//het cijfer tussen 1 tot 18 zijn of 1 of 18
 void setup() {
   gevonden = false;
   
