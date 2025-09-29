@@ -1,3 +1,4 @@
+<script type="application/processing">
 int xWaarde = 0;
 int yWaarde = 0;
 void setup() {
@@ -26,3 +27,5 @@ void draw() {
   fill(0, 255, 0);
   ellipse(xWaarde, yWaarde, 50, 50);
 }
+</script>
+<canvas> </canvas>
