@@ -19,6 +19,6 @@ class Rectangle {
 
 void setup() {
   size(400, 400);
-  Rectangle mijnRechthoek = new Rectangle(200, 200, 100, 20);
+  Rectangle mijnRechthoek = new Rectangle(200, 200, 100, 175);
   mijnRechthoek.teken();
 }
