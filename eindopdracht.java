@@ -77,4 +77,4 @@ void setup(){
   println(gemiddelde(8,4)/2);
   println(gemiddelde(10,5)/2);
   println(gemiddelde(5,4)/2);
-}
+} 
