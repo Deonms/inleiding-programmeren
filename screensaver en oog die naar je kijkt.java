@@ -5,7 +5,7 @@ void setup() {
   size(750, 750);
 }
 void draw() {
-  //background(255,255,255);
+  background(255,255,255);
   xWaarde++;
   yWaarde+=5;
   if (xWaarde >= 900) {
