@@ -49,97 +49,108 @@ float x8Speed = 1;
 float y8Speed = 1;
 
 ResetManager reset;
+Obstacle obstacle = new Obstacle(25, 100, 300, 2, 2);
 
 void setup() {
   size(800, 800);
   reset = new ResetManager();
-  
 }
 class ResetManager {
-void resetAll() {
-tijdUur = 0;
-tijdMinuten = 0;
-tijdSeconden = 0;
-tijdSecondenHidden = 0;
-x1Speed = 1;
-y1Speed = 1;
-x2Speed = 1;
-y2Speed = 1;
-x3Speed = 1;
-y3Speed = 1;
-x4Speed = 1;
-y4Speed = 1;
-x5Speed = 1;
-y5Speed = 1;
-x6Speed = 1;
-y6Speed = 1;
-x7Speed = 1;
-y7Speed = 1;
-x8Speed = 1;
-y8Speed = 1;
-x1 = 250;
-y1 = 200;
-x2 = 250;
-y2 = 200;
-x3 = 250;
-y3 = 200;
-x4 = 450;
-y4 = 400;
-x5 = 300;
-y5 = 250;
-x6 = 350;
-y6 = 400;
-x7 = 450;
-y7 = 400;
-x8 = 400;
-y8 = 350;
-grooteOranje = 20;
+  void resetAll() {
+    tijdUur = 0;
+    tijdMinuten = 0;
+    tijdSeconden = 0;
+    tijdSecondenHidden = 0;
+    x1Speed = 1;
+    y1Speed = 1;
+    x2Speed = 1;
+    y2Speed = 1;
+    x3Speed = 1;
+    y3Speed = 1;
+    x4Speed = 1;
+    y4Speed = 1;
+    x5Speed = 1;
+    y5Speed = 1;
+    x6Speed = 1;
+    y6Speed = 1;
+    x7Speed = 1;
+    y7Speed = 1;
+    x8Speed = 1;
+    y8Speed = 1;
+    x1 = 250;
+    y1 = 200;
+    x2 = 250;
+    y2 = 200;
+    x3 = 250;
+    y3 = 200;
+    x4 = 450;
+    y4 = 400;
+    x5 = 300;
+    y5 = 250;
+    x6 = 350;
+    y6 = 400;
+    x7 = 450;
+    y7 = 400;
+    x8 = 400;
+    y8 = 350;
+    grooteOranje = 20;
+  }
 }
-
 class Obstacle {
   int size;
   float positionX;
   float positionY;
   float speedY;
   float speedX;
-  Obstacle(int size, float positionX, float positionY , float speedX, float speedY) {
-        this.size = size;
-        this.positionX = positionX;
-        this.positionY = positionY;
-        this.speedX = speedX;
-        this.speedY = speedY;
-  }
-  void collision(){
-    if (mouseY >= positionY && mouseY <= positionY && mouseX >= positionX && mouseX <= positionX)
-    {
-     println("Score: " +  tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Groen");
-    scorefinal = "Score: " + tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Groen";
-    reset.resetAll();
-    }
-  } void move(){
-    fill(0,255,0);
-    ellipse(positionX, positionY, size, size);
-    positionX += speedX;
-  y1 += speedY;
-  if (positionX < 0 || positionX > width) {
-    speedX *= -1;
-  }
-  if (positionY < 0  || positionY > height) {
-    speedY *= -1;
-  }
-  if (positionX <= 10) {
-    positionX = width;
-  }
-  }
-} //ik heb het geprobeert maar classes vindt ik nog moeilijk en zonder hulp kan ik het niet verder doen want ik vindt classes gewoon moeilijk
-}
 
+  Obstacle(int size, float positionX, float positionY, float speedX, float speedY) {
+    this.size = size;
+    this.positionX = positionX;
+    this.positionY = positionY;
+    this.speedX = speedX;
+    this.speedY = speedY;
+  }
+
+  void collision() {
+    if (mouseY >= positionY && mouseY <= positionY + size && mouseX >= positionX && mouseX <= positionX + size) {
+      println("Score: " + tijdUur + ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Groen");
+      scorefinal = "Score: " + tijdUur + ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Groen";
+      reset.resetAll();
+    }
+  }
+
+  void tekenJezelf() {
+    rect(positionX, positionY, size, size);
+  }
+
+  void move() {
+    positionX += speedX;
+    positionY += speedY; // 
+
+    // Botsen tegen randen
+    if (positionX < 0 || positionX + size > width) {
+      speedX *= -1;
+    }
+    if (positionY < 0 || positionY + size > height) {
+      speedY *= -1;
+    }
+  }
+}
+ 
 void draw() {
   background(100, 100, 255);
   fill(0, 255, 0);
+
+  obstacle.tekenJezelf();
+  obstacle.move();
+
   ellipse(mouseX, mouseY, 25, 25); //speler
   //if hit code
-    if (mouseY >= y1 && mouseY <= y1+60 && mouseX >= x1 && mouseX <= x1+30) {
+  obstacle.tekenJezelf();
+  obstacle.move();
+  obstacle.collision();
+
+  if (mouseY >= y1 && mouseY <= y1+60 && mouseX >= x1 && mouseX <= x1+30) {
     println("Score: " +  tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Rood");
     scorefinal = "Score: " + tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Rood";
     reset.resetAll();
@@ -147,7 +158,7 @@ void draw() {
   if (mouseY >= y3 && mouseY <= y3+30 && mouseX >= x3 && mouseX <= x3+100) {
     println("Score: " + tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Cyan" );
     scorefinal = "Score: " + tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Cyan";
-    reset.resetAll(); 
+    reset.resetAll();
   }
   if (mouseY >= y2 && mouseY <= y2+30 && mouseX >= x2 && mouseX <= x2+30) {
     println("Score: " + tijdUur+ ":" + tijdMinuten + ":" + tijdSeconden + ":" + tijdSecondenHidden + ". je bent afgegaan door Geel");
@@ -283,12 +294,12 @@ void draw() {
     y8Speed *= -1;
   }
   //einde rect Kastanjebruin
- //fake player start
- fill(0, 255, 0);
-ellipse(1,1,1,1);
-// Beweging van fake player
+  //fake player start
+  fill(0, 255, 0);
+  ellipse(1, 1, 1, 1);
+  // Beweging van fake player
 
-//fake player end
+  //fake player end
   fill(0, 0, 0);
   textSize(100);
   tijdSecondenHidden = tijdSecondenHidden + 0.8;
@@ -319,14 +330,14 @@ ellipse(1,1,1,1);
     x4 = 450;
     y4 = 400;
   }
-if (inArray(uneven, tijdMinuten) && tijdSeconden == 0 && tijdSecondenHidden >= 0 && tijdSecondenHidden <= 0.8) {
-x2Speed = 10;
-y2Speed = 10;
-}
-if (inArray(even, tijdMinuten) && tijdSeconden == 0 && tijdSecondenHidden >= 0 && tijdSecondenHidden <= 0.8) {
-x2Speed = 1;
-y2Speed = 1;
-}
+  if (inArray(uneven, tijdMinuten) && tijdSeconden == 0 && tijdSecondenHidden >= 0 && tijdSecondenHidden <= 0.8) {
+    x2Speed = 10;
+    y2Speed = 10;
+  }
+  if (inArray(even, tijdMinuten) && tijdSeconden == 0 && tijdSecondenHidden >= 0 && tijdSecondenHidden <= 0.8) {
+    x2Speed = 1;
+    y2Speed = 1;
+  }
   if (tijdSeconden == 30 && tijdSecondenHidden >= 00 && tijdSecondenHidden <= 0.8) {
     x4 = 450;
     y4 = 400;
@@ -346,16 +357,13 @@ y2Speed = 1;
   textSize(25);
   text(scorefinal, 10, height-10);
 }
-class FakePlayer {
-  
-}
-  boolean inArray(float[] arr, float value) {
-for (int i = 0; i < arr.length; i++) {
-if (arr[i] == value) {
-return true;
-}
-}
-return false;
+boolean inArray(float[] arr, float value) {
+  for (int i = 0; i < arr.length; i++) {
+    if (arr[i] == value) {
+      return true;
+    }
+  }
+  return false;
 }
 
 
